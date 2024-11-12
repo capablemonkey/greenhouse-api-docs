@@ -585,7 +585,7 @@ attachments | No | array | An array of attachments to be uploaded to this applic
 
 Parameter | Required | Type | Description
 --------- | ----------- | ----------- | ----------- |
-prospect | Yes | boolean | Set to `"true"` in order to create a prospect application.
+prospect | Yes | string | Set to `"true"` in order to create a prospect application.
 job_ids | No | array | An optional array of Job IDs to consider this prospect for.
 source_id | No | integer | The id of the source to be credited for this application
 referrer | No | object | An object representing the referrer
