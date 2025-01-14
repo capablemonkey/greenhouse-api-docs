@@ -321,7 +321,7 @@ For organizations using Greenhouse Inclusion, the response may contain demograph
 
 ### Data Compliance
 
-For organizations with GDPR rules configured and operating with a legal basis of explicit consent, the response may contain data_compliance objects. These objects will include whether a response is required and the data retention period in days as configured by the appropriate rule.
+Responses may include `data_compliance` objects if your organization is using GDPR rules and 'explicit consent' legal basis. The object includes whether a response is required, and configured data retention period (in days) for the associated rule.
 
 ### Board-level Introductions and Conclusions
 

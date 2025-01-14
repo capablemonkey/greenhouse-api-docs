@@ -41,6 +41,10 @@ Please keep in mind that the HTTP Basic Auth API token is a secret key.  Any for
     {{ORGANIZATION}} has my consent to collect, store, and process my data for the purpose
     of considering me for employment.
   </label>
+  <label>
+    <input type="checkbox" name="data_compliance[gdpr_demographic_data_consent_given]" value="1" />
+    By checking this box, I consent to {{ORGANIZATION}} collecting, storing, and processing my responses to the demographic data surveys above.
+  </label>
   <input type="submit" />
 </form>
 ```
@@ -87,6 +91,7 @@ curl -X POST \
   -F "data_compliance[gdpr_consent_given]=true" \ # `gdpr_consent_given` to be deprecated. Use if your organization doesn't have single-purpose consent configured, otherwise use separate values for processing and retention
   -F "data_compliance[gdpr_processing_consent_given]=true" \
   -F "data_compliance[gdpr_retention_consent_given]=true" \
+  -F "data_compliance[gdpr_demographic_data_consent_given]=true" \
   "https://boards-api.greenhouse.io/v1/boards/very_awesome_inc/jobs/127817"
 ```
 
@@ -174,6 +179,7 @@ curl -X POST \
     "gdpr_consent_given": true, // To be deprecated. Use if your organization doesn't have single-purpose consent configured, otherwise use separate values for processing and retention
     "gdpr_processing_consent_given": true
     "gdpr_retention_consent_given": true
+    "gdpr_demographic_data_consent_given": true
   }' \
   "https://boards-api.greenhouse.io/v1/boards/very_awesome_inc/jobs/127817"
 ```
